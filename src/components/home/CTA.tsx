@@ -10,7 +10,7 @@ export function CTA() {
     <section className="group/cta relative isolate overflow-hidden bg-[#24137a] text-white">
       {/* Stadium background, with a slow zoom on hover */}
       <Image
-        src="/images/home/stadium.webp"
+        src="/images/home/new-banner.jpeg"
         alt=""
         fill
         sizes="100vw"
