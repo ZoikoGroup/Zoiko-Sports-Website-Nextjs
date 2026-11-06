@@ -1,4 +1,5 @@
 import { Hero } from "@/components/home/Hero";
+import { SportsStrip } from "@/components/home/SportsStrip";
 import { SportsMarquee } from "@/components/home/SportsMarquee";
 import { TheProblem } from "@/components/home/TheProblem";
 import { FourPillars } from "@/components/home/FourPillars";
@@ -15,6 +16,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <SportsStrip />
       <SportsMarquee />
       <TheProblem />
       <FourPillars />
