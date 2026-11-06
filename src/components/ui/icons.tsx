@@ -34,10 +34,20 @@ export function LinkedInIcon(props: IconProps) {
   );
 }
 
-export function FacebookIcon(props: IconProps) {
+export function YouTubeIcon(props: IconProps) {
   return (
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>
-      <path d="M13.5 21.5v-8.2h2.75l.42-3.2H13.5V8.05c0-.93.26-1.56 1.59-1.56h1.7V3.63A22.6 22.6 0 0 0 14.3 3.5c-2.45 0-4.13 1.5-4.13 4.25v2.36H7.4v3.2h2.77v8.2h3.33Z" />
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" {...props}>
+      <path d="M8.5 5.5v13L19 12 8.5 5.5Z" fill="currentColor" />
+    </svg>
+  );
+}
+
+export function InstagramIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true" {...props}>
+      <rect x="3.5" y="3.5" width="17" height="17" rx="4.5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.2" cy="6.8" r=".6" fill="currentColor" />
     </svg>
   );
 }

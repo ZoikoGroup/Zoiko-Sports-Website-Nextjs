@@ -437,27 +437,30 @@ export const footerColumns: NavColumn[] = [
 
 export const offices = [
   {
-    label: "Headquarters",
-    lines: ["1401 21st Street, Suite R, Sacramento, CA", "95811, United States"],
+    label: "Global Headquarters",
+    lines: ["1401 21st Street, Suite R,", "Sacramento, CA 95811, USA"],
   },
   {
     label: "European Headquarters",
-    lines: ["167–169 Great Portland Street, 5th Floor,", "London W1W 5PF, United Kingdom"],
+    lines: ["167–169 Great Portland Street,", "5th Floor, London W1W 5PF,", "United Kingdom"],
   },
 ];
 
+/** Bottom-bar links, in display order. */
 export const legalLinks: NavLink[] = [
   { label: "Privacy", href: "/legal/privacy-policy" },
   { label: "Terms", href: "/legal/terms" },
   { label: "Accessibility", href: "/legal/accessibility" },
+  { label: "Cookie Preferences", href: "/legal/cookie-policy#preferences" },
   { label: "Your Privacy Choices", href: "/legal/privacy-choices" },
 ];
 
 // TODO: replace with the official social profile URLs
 export const socialLinks = [
   { label: "LinkedIn", href: "https://www.linkedin.com/", icon: "linkedin" },
-  { label: "Facebook", href: "https://www.facebook.com/", icon: "facebook" },
+  { label: "YouTube", href: "https://www.youtube.com/", icon: "youtube" },
   { label: "X", href: "https://x.com/", icon: "x" },
+  { label: "Instagram", href: "https://www.instagram.com/", icon: "instagram" },
 ] as const;
 
 export const headerCtas = {
