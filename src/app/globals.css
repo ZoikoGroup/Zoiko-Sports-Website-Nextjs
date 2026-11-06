@@ -1,0 +1,245 @@
+@import "tailwindcss";
+
+/*
+ * Semantic — heading typeface (self-hosted).
+ * Drop the licensed font files into /public/fonts using these names.
+ * Until they exist, headings fall back to Hanken Grotesk automatically.
+ */
+@font-face {
+  font-family: "Semantic";
+  src: url("/fonts/Semantic-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Semantic";
+  src: url("/fonts/Semantic-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Semantic";
+  src: url("/fonts/Semantic-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Semantic";
+  src: url("/fonts/Semantic-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  /* Brand */
+  --color-brand-yellow: #fecf23;
+  --color-brand-yellow-hover: #f5c400;
+  --color-brand-blue: #377eb8;
+  --color-brand-blue-light: #5aa2dc;
+
+  /* Surfaces */
+  --color-navy-800: #2e2150;
+  --color-navy-900: #261a42; /* header */
+  --color-navy-950: #1e1435; /* footer */
+  --color-ink: #1d1433; /* text on light */
+  --color-ink-muted: #5d5670;
+  --color-cream: #fbfaf6; /* mega-menu panel */
+
+  /* Type */
+  --font-sans: var(--font-hanken), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Semantic", var(--font-hanken), ui-sans-serif, system-ui,
+    sans-serif;
+
+  /* Desktop nav kicks in once all 8 menu items + CTAs fit on one row */
+  --breakpoint-nav: 75rem;
+
+  /* Motion */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-ball-spin: ball-spin 1.6s linear infinite;
+  --animate-ring-spin: ring-spin 1.4s linear infinite;
+  --animate-fade-up: fade-up 0.7s var(--ease-out-expo) both;
+
+  @keyframes ball-spin {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50px);
+    }
+  }
+  @keyframes ring-spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Page-width container shared by all content sections */
+@utility container-page {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 77.5rem;
+  padding-inline: 1.25rem;
+  @variant sm {
+    padding-inline: 2rem;
+  }
+}
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+  }
+  /* Keep anchor targets clear of the sticky header */
+  [id] {
+    scroll-margin-top: 96px;
+  }
+  body {
+    @apply bg-white font-sans text-ink antialiased;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-brand-yellow;
+  }
+}
+
+/* ---------- Page reveal (runs once the preloader lifts) ---------- */
+.reveal {
+  opacity: 0;
+}
+html[data-loaded] .reveal {
+  animation: fade-up 0.9s var(--ease-out-expo) both;
+  animation-delay: var(--delay, 0ms);
+}
+
+/* ---------- Home: sports marquee ---------- */
+.marquee-track {
+  animation: marquee 45s linear infinite;
+}
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ---------- Home: hero image ---------- */
+.hero-image {
+  opacity: 0;
+}
+html[data-loaded] .hero-image {
+  animation: hero-in 1.6s var(--ease-out-expo) 0.15s both;
+}
+@keyframes hero-in {
+  from {
+    opacity: 0;
+    transform: scale(1.08) translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateX(0);
+  }
+}
+.hero-float {
+  animation: hero-float 7s ease-in-out infinite;
+}
+@keyframes hero-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* ---------- Home: flowing swoosh lines ---------- */
+.swoosh-flow {
+  stroke-dasharray: 18 14;
+  animation: swoosh-flow 2.4s linear infinite;
+}
+@keyframes swoosh-flow {
+  to {
+    stroke-dashoffset: -64;
+  }
+}
+
+/* ---------- 404: bouncing ball ---------- */
+.ball-bounce {
+  animation: ball-bounce 1.3s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+@keyframes ball-bounce {
+  0%,
+  100% {
+    transform: translateY(0) scale(1.06, 0.94);
+  }
+  12% {
+    transform: translateY(-6%) scale(1, 1);
+  }
+  50% {
+    transform: translateY(-26%) scale(0.98, 1.02);
+  }
+}
+.ball-shadow {
+  animation: ball-shadow 1.3s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+@keyframes ball-shadow {
+  0%,
+  100% {
+    transform: scaleX(1);
+    opacity: 0.55;
+  }
+  50% {
+    transform: scaleX(0.6);
+    opacity: 0.2;
+  }
+}
+
+/* ---------- Preloader ---------- */
+.preloader-bar {
+  animation: preloader-bar 1.5s var(--ease-out-expo) forwards;
+}
+@keyframes preloader-bar {
+  0% {
+    transform: scaleX(0);
+  }
+  60% {
+    transform: scaleX(0.72);
+  }
+  100% {
+    transform: scaleX(0.92);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
