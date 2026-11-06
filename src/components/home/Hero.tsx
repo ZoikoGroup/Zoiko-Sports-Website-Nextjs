@@ -60,7 +60,7 @@ export function Hero() {
       <div className="relative mx-auto flex max-w-[1320px] items-center px-5 py-14 sm:px-8 xl:min-h-[min(50vw,860px)] xl:py-10">
         <div className="max-w-[620px]">
           <p
-            className="reveal inline-flex rounded-full border border-white/40 bg-white/5 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/90 backdrop-blur"
+            className="reveal inline-flex rounded-full border border-white/40 bg-white/5 px-3 py-1.5 text-[9.5px] font-semibold uppercase tracking-[0.1em] sm:px-4 sm:text-[11px] sm:tracking-[0.16em] text-white/90 backdrop-blur"
             style={delay(0)}
           >
             The Operating &amp; Intelligence Layer for Sport
@@ -112,13 +112,13 @@ export function Hero() {
             {features.map(({ icon: Icon, title, text }, i) => (
               <li
                 key={text}
-                className={`reveal group flex flex-col items-center px-2 text-center ${i > 0 ? "border-l border-white/20" : ""}`}
+                className={`reveal group flex flex-col items-center px-1 text-center sm:px-2 ${i > 0 ? "border-l border-white/20" : ""}`}
                 style={delay(520 + i * 80)}
               >
                 <span className="grid h-10 w-10 place-items-center rounded-xl text-white transition-all duration-300 group-hover:-translate-y-1 group-hover:bg-brand-yellow group-hover:text-ink group-hover:shadow-[0_8px_24px_-6px_rgba(254,207,35,0.7)]">
                   <Icon className="h-6 w-6" strokeWidth={1.5} />
                 </span>
-                <p className="mt-2 text-[13.5px] leading-tight text-white/90">
+                <p className="mt-2 text-[11.5px] leading-tight text-white/90 sm:text-[13.5px]">
                   {title}
                   <br />
                   {text}

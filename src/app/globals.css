@@ -110,6 +110,9 @@
   }
   body {
     @apply bg-white font-sans text-ink antialiased;
+    /* Safety net: entrance animations that start off-screen must never cause sideways scroll on phones.
+       `clip` (unlike `hidden`) keeps the sticky header working. */
+    overflow-x: clip;
   }
   h1,
   h2,

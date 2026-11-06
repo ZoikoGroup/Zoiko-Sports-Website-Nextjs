@@ -43,7 +43,7 @@ export function WhoWeServe() {
           </h2>
         </Reveal>
 
-        <RevealGroup className="mt-10 grid gap-6 md:grid-cols-3">
+        <RevealGroup className="mx-auto mt-10 grid max-w-[640px] gap-6 lg:max-w-none lg:grid-cols-3">
           {audiences.map((a) => (
             <RevealItem key={a.title} className="h-full">
               <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-black/[0.07] bg-[#fbfaf7] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_60px_-24px_rgba(29,20,51,0.3)]">

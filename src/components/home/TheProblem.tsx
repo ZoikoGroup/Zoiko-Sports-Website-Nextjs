@@ -35,7 +35,7 @@ export function TheProblem() {
   const frontY = useTransform(scrollYProgress, [0, 1], [70, -50]);
 
   return (
-    <section className="bg-[#f4f2ec] py-20 lg:py-28">
+    <section className="overflow-x-clip bg-[#f4f2ec] py-20 lg:py-28">
       <div className="container-page">
         <div className="grid items-center gap-14 lg:grid-cols-[1.05fr_1fr]">
           <Reveal>

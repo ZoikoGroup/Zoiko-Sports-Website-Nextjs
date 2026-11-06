@@ -53,8 +53,8 @@ export function Footer() {
         </nav>
 
         {/* Brand, socials and offices */}
-        <RevealGroup className="grid gap-8 border-t border-white/15 py-8 sm:grid-cols-2 lg:grid-cols-[auto_1fr_1fr_1fr] lg:items-stretch lg:gap-0">
-          <RevealItem className="lg:pr-8">
+        <RevealGroup className="grid gap-8 border-t border-white/15 py-8 sm:grid-cols-2 xl:grid-cols-[auto_1fr_1fr_1fr] xl:items-stretch xl:gap-0">
+          <RevealItem className="xl:pr-8">
             <Link
               href="/"
               aria-label="Zoiko Sports — home"
@@ -64,7 +64,7 @@ export function Footer() {
             </Link>
           </RevealItem>
 
-          <RevealItem className="lg:border-l lg:border-white/20 lg:px-8">
+          <RevealItem className="xl:border-l xl:border-white/20 xl:px-8">
             <p className="font-heading text-[15px] font-semibold leading-relaxed">
               Connected sports operations.
               <br />
@@ -91,7 +91,7 @@ export function Footer() {
           </RevealItem>
 
           {offices.map((office) => (
-            <RevealItem key={office.label} className="lg:border-l lg:border-white/20 lg:px-8">
+            <RevealItem key={office.label} className="xl:border-l xl:border-white/20 xl:px-8">
               <address className="group flex gap-3 not-italic">
                 <MapPin className="mt-0.5 h-5 w-5 shrink-0 fill-brand-yellow text-[#240934] transition-transform duration-300 group-hover:-translate-y-1" />
                 <div>
@@ -110,15 +110,15 @@ export function Footer() {
         </RevealGroup>
 
         {/* Bottom bar */}
-        <div className="flex flex-col gap-4 border-t border-white/15 py-6 text-[12px] text-white/70 lg:flex-row lg:items-center lg:justify-between">
+        <div className="flex flex-col gap-4 border-t border-white/15 py-6 text-[12px] text-white/70 xl:flex-row xl:items-center xl:justify-between">
           <p>
             © <CurrentYear /> Zoiko Tech Inc. All rights reserved. Zoiko Sports is a platform of Zoiko Tech Inc., a
             Zoiko Group company.
           </p>
-          <ul className="flex flex-wrap items-center gap-x-5 gap-y-2 lg:gap-x-0">
-            {/* Divider bars only on one line (desktop); on wrap they would dangle */}
+          <ul className="flex flex-wrap items-center gap-x-5 gap-y-2 xl:shrink-0 xl:gap-x-0">
+            {/* Divider bars only on one line (wide desktop); on wrap they would dangle */}
             {legalLinks.map((l, i) => (
-              <li key={l.label} className={i > 0 ? "lg:ml-3 lg:border-l lg:border-white/40 lg:pl-3" : ""}>
+              <li key={l.label} className={i > 0 ? "xl:ml-3 xl:border-l xl:border-white/40 xl:pl-3" : ""}>
                 <Link href={l.href} className="transition-colors duration-200 hover:text-brand-yellow">
                   {l.label}
                 </Link>
