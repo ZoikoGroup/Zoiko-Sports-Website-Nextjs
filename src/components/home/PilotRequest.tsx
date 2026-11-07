@@ -80,7 +80,7 @@ export function PilotRequest() {
           </p>
           <div className="group relative mt-6 overflow-hidden rounded-2xl">
             <Image
-              src="/images/home/pilot-coach.png"
+              src="/images/home/pilot-coach.webp"
               alt="Coach briefing a youth team on the pitch"
               width={461}
               height={280}

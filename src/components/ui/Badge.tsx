@@ -7,7 +7,7 @@ const tones = {
     EXTERNAL: "bg-[#e6eef6] text-brand-blue",
   },
   dark: {
-    GATED: "bg-white/10 text-white/60",
+    GATED: "bg-white/15 text-white/75",
     FUTURE: "bg-white/10 text-white/60",
     EXTERNAL: "bg-brand-blue/20 text-brand-blue-light",
   },

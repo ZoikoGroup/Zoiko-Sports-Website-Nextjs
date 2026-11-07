@@ -9,19 +9,19 @@ const EASE = [0.16, 1, 0.3, 1] as const;
 
 const problems = [
   {
-    image: "/images/home/problem-schedule-drift.png",
+    image: "/images/home/problem-schedule-drift.webp",
     alt: "Coach briefing players in training bibs",
     title: "Schedule drift",
     text: "A revised start time is approved, but a venue access plan or staffing schedule still reflects the previous time.",
   },
   {
-    image: "/images/home/problem-open-work.png",
+    image: "/images/home/problem-open-work.webp",
     alt: "Team discussing plans in an office",
     title: "Invisible open work",
     text: "Each organization sees its own checklist, while unresolved dependencies remain difficult to see across the event.",
   },
   {
-    image: "/images/home/problem-decision.png",
+    image: "/images/home/problem-decision.webp",
     alt: "Coach reviewing a clipboard with basketball players",
     title: "Decision reconstruction",
     text: "After the event, teams spend time rebuilding who requested a change, who approved it, and what information the decision relied on.",
@@ -79,7 +79,7 @@ export function TheProblem() {
               className="absolute bottom-[2%] right-0 z-10 w-[62%] drop-shadow-[0_24px_40px_rgba(29,20,51,0.25)]"
             >
               <Image
-                src="/images/home/problem-tunnel.png"
+                src="/images/home/problem-tunnel.webp"
                 alt="Player waiting in the tunnel before kick-off"
                 width={355}
                 height={286}

@@ -143,7 +143,7 @@ export function EventJourney() {
                   className="absolute inset-0"
                 >
                   <Image
-                    src="/images/home/journey-banner.png"
+                    src="/images/home/journey-banner.webp"
                     alt=""
                     fill
                     sizes="(min-width: 1024px) 860px, 100vw"

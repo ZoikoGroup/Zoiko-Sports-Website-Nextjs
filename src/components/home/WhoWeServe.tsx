@@ -5,7 +5,7 @@ import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
 
 const audiences = [
   {
-    image: "/images/home/serve-leagues.png",
+    image: "/images/home/serve-leagues.webp",
     alt: "Floodlit football stadium full of spectators",
     title: "Leagues & competition organizers",
     roles: "Competition directors, operations leaders, event managers",
@@ -14,7 +14,7 @@ const audiences = [
     link: { label: "Explore organizer solutions", href: "/who-we-serve/leagues-organizers" },
   },
   {
-    image: "/images/home/serve-clubs.png",
+    image: "/images/home/serve-clubs.webp",
     alt: "Players celebrating together on the pitch",
     title: "Clubs",
     roles: "Club operations managers, club secretaries, event-day leads",
@@ -23,7 +23,7 @@ const audiences = [
     link: { label: "Explore club solutions", href: "/who-we-serve/clubs-teams" },
   },
   {
-    image: "/images/home/serve-venues.png",
+    image: "/images/home/serve-venues.webp",
     alt: "Ice hockey arena with a packed seating bowl",
     title: "Venue operators",
     roles: "Venue directors, operations managers, safety and event operations roles",

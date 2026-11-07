@@ -21,6 +21,12 @@ export const navPaths = new Set(
     .filter((h) => h !== "/"),
 );
 
+/**
+ * Nav paths that have their own route under src/app (e.g. app/about/page.tsx).
+ * The `[...slug]` placeholder skips these so it never pre-renders over them.
+ */
+export const builtPaths = new Set(["/about", "/platform/approvals-decisions", "/platform/competition-operations"]);
+
 /** Every path the site serves a page for. */
 export function isKnownPath(pathname: string) {
   const path = pathname.length > 1 ? pathname.replace(/\/+$/, "") : pathname;

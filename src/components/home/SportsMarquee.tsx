@@ -3,13 +3,13 @@ import { Reveal } from "@/components/ui/Reveal";
 
 /** `labelled`: the image already has its caption baked in. */
 const sports = [
-  { src: "/images/home/sport-football.png", label: "Football", labelled: false },
-  { src: "/images/home/sport-basketball.png", label: "Basketball", labelled: true },
-  { src: "/images/home/sport-ice-arenas.png", label: "Ice arenas", labelled: true },
-  { src: "/images/home/sport-cycling.png", label: "Cycling", labelled: true },
-  { src: "/images/home/sport-racing.png", label: "Racing", labelled: true },
-  { src: "/images/home/sport-tennis.png", label: "Tennis venues", labelled: true },
-  { src: "/images/home/sport-stadiums.png", label: "Stadiums", labelled: true },
+  { src: "/images/home/sport-football.webp", label: "Football", labelled: false },
+  { src: "/images/home/sport-basketball.webp", label: "Basketball", labelled: true },
+  { src: "/images/home/sport-ice-arenas.webp", label: "Ice arenas", labelled: true },
+  { src: "/images/home/sport-cycling.webp", label: "Cycling", labelled: true },
+  { src: "/images/home/sport-racing.webp", label: "Racing", labelled: true },
+  { src: "/images/home/sport-tennis.webp", label: "Tennis venues", labelled: true },
+  { src: "/images/home/sport-stadiums.webp", label: "Stadiums", labelled: true },
 ];
 
 function SportCard({ src, label, labelled, hidden }: (typeof sports)[number] & { hidden?: boolean }) {

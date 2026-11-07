@@ -104,7 +104,7 @@ export function EventDayTimeline() {
     <section className="relative isolate overflow-hidden bg-navy-950 py-20 text-white lg:py-28">
       {/* Atmospheric stadium backdrop */}
       <Image
-        src="/images/home/serve-leagues.png"
+        src="/images/home/serve-leagues.webp"
         alt=""
         fill
         sizes="100vw"
