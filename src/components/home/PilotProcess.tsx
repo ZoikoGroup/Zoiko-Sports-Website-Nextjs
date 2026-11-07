@@ -33,9 +33,9 @@ const steps = [
 // The tennis and stadium images carry a caption at the bottom; the overlapping
 // cards below cover it, matching the design.
 const images = [
-  { src: "/images/home/sport-stadiums.png", alt: "Stadium bowl under a bright sky" },
-  { src: "/images/home/sport-football.png", alt: "Amateur football match" },
-  { src: "/images/home/sport-tennis.png", alt: "Covered tennis courts" },
+  { src: "/images/home/sport-stadiums.webp", alt: "Stadium bowl under a bright sky" },
+  { src: "/images/home/sport-football.webp", alt: "Amateur football match" },
+  { src: "/images/home/sport-tennis.webp", alt: "Covered tennis courts" },
 ];
 
 const yours = [

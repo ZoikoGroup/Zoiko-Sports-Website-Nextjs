@@ -10,7 +10,7 @@ export function CTA() {
     <section className="group/cta relative isolate overflow-hidden bg-[#24137a] text-white">
       {/* Stadium background, with a slow zoom on hover */}
       <Image
-        src="/images/home/new-banner.jpeg"
+        src="/images/footer/cta-stadium-banner.webp"
         alt=""
         fill
         sizes="100vw"
@@ -19,7 +19,7 @@ export function CTA() {
       {/* Light centre shade so the copy stays readable */}
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,rgba(20,8,60,0.45),transparent_75%)]" />
 
-      <div className="container-page relative py-14 text-center lg:py-16">
+      <div className="container-page relative py-16 text-center lg:py-[100px]">
         <Reveal>
           <h2 className="text-[clamp(2rem,4vw,3rem)] font-bold leading-tight tracking-tight">
             Connect Every Side of <span className="text-brand-yellow">Sport.</span>

@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowRight } from "@/components/ui/icons";
-import { navPaths } from "@/data/routes";
+import { builtPaths, navPaths } from "@/data/routes";
 
-/** Prerender a placeholder for every navigation destination. */
+/** Prerender a placeholder for every navigation destination that has no real page yet. */
 export function generateStaticParams() {
-  return [...navPaths].map((p) => ({ slug: p.slice(1).split("/") }));
+  return [...navPaths].filter((p) => !builtPaths.has(p)).map((p) => ({ slug: p.slice(1).split("/") }));
 }
 
 /**

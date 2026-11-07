@@ -61,7 +61,7 @@ export const megaMenus: MegaMenu[] = [
       },
     ],
     feature: {
-      image: { src: "/images/nav/platform.png", width: 251, height: 141 },
+      image: { src: "/images/nav/platform.webp", width: 251, height: 141 },
       imageAlt: "Footballer striking a ball on a training pitch",
       title: "Start with the operating model",
       text: "See how one event moves from planning to preparation, event-day coordination and review.",
@@ -98,7 +98,7 @@ export const megaMenus: MegaMenu[] = [
       },
     ],
     feature: {
-      image: { src: "/images/nav/solutions.png", width: 251, height: 90 },
+      image: { src: "/images/nav/solutions.webp", width: 251, height: 90 },
       imageAlt: "Players running across a pitch with footballs",
       title: "Not sure where to start?",
       text: "Describe the coordination problem. Zoiko Sports can scope the smallest credible workflow around it.",
@@ -133,7 +133,7 @@ export const megaMenus: MegaMenu[] = [
       },
     ],
     feature: {
-      image: { src: "/images/nav/who-we-serve.png", width: 251, height: 93 },
+      image: { src: "/images/nav/who-we-serve.webp", width: 251, height: 93 },
       imageAlt: "Silhouettes of runners at dusk",
       title: "Designed around organizations, not just users",
       text: "The navigation should reinforce that access.",
@@ -171,7 +171,7 @@ export const megaMenus: MegaMenu[] = [
       },
     ],
     feature: {
-      image: { src: "/images/nav/sports.png", width: 251, height: 119 },
+      image: { src: "/images/nav/sports.webp", width: 251, height: 119 },
       imageAlt: "Athletes training in a gym",
       title: "Launch rule",
       text: "At launch, this panel may contain only Sports Overview and Discuss Your Sport.",
@@ -208,7 +208,7 @@ export const megaMenus: MegaMenu[] = [
       },
     ],
     feature: {
-      image: { src: "/images/nav/integrations.png", width: 251, height: 91 },
+      image: { src: "/images/nav/integrations.webp", width: 251, height: 91 },
       imageAlt: "Group fitness class in motion",
       title: "Bring the system landscape to scoping",
       text: "The pilot agreement identifies what is imported, integrated, manually.",
@@ -246,7 +246,7 @@ export const megaMenus: MegaMenu[] = [
       },
     ],
     feature: {
-      image: { src: "/images/nav/trust.png", width: 251, height: 106 },
+      image: { src: "/images/nav/trust.webp", width: 251, height: 106 },
       imageAlt: "Group of athletes stretching together",
       title: "Trust should answer buyer diligence early",
       text: "Make the assurance path easy to find before a prospect has to ask Sales for basic security, privacy, accessibility or status information.",
@@ -284,7 +284,7 @@ export const megaMenus: MegaMenu[] = [
       },
     ],
     feature: {
-      image: { src: "/images/nav/resources.png", width: 251, height: 91 },
+      image: { src: "/images/nav/resources.webp", width: 251, height: 91 },
       imageAlt: "Athletes during a strength training session",
       title: "Featured resource",
       text: "One current, high-value resource may appear here, maintained editorially and falling back to the Resource Center if unpublished.",
@@ -298,7 +298,7 @@ export const megaMenus: MegaMenu[] = [
       {
         heading: "Company",
         links: [
-          { label: "Company Overview", href: "/company", description: "What Zoiko Sports is, who operates it, and how it fits within Zoiko." },
+          { label: "Company Overview", href: "/about", description: "What Zoiko Sports is, who operates it, and how it fits within Zoiko." },
           { label: "Leadership & Governance", href: "/company/leadership", badge: "GATED", description: "Relevant leadership and governance information once approved." },
           { label: "Global Presence", href: "/company/global-presence", badge: "GATED", description: "Corporate locations and operating presence; distinguish HQ from registered offices." },
         ],
@@ -322,11 +322,11 @@ export const megaMenus: MegaMenu[] = [
       },
     ],
     feature: {
-      image: { src: "/images/nav/company.png", width: 251, height: 115 },
+      image: { src: "/images/nav/company.webp", width: 251, height: 115 },
       imageAlt: "Young players with a basketball, shot from below",
       title: "Corporate identity",
       text: "ZOIKO SPORTS is the public masterbrand. Zoiko Tech Inc.",
-      cta: { label: "Company Overview", href: "/company" },
+      cta: { label: "Company Overview", href: "/about" },
     },
   },
 ];
@@ -361,7 +361,7 @@ export const footerColumns: NavColumn[] = [
       { label: "Leagues & Organizers", href: "/who-we-serve/leagues-organizers" },
       { label: "Clubs & Teams", href: "/who-we-serve/clubs-teams" },
       { label: "Venue Operators", href: "/who-we-serve/venue-operators" },
-      { label: "Event Delivery Partners", href: "/who-we-serve/contractors-partners" },
+      { label: "Event Delivery Partners", href: "/who-we-serve/contractors-partners", badge: "GATED" },
     ],
   },
   {
@@ -370,7 +370,7 @@ export const footerColumns: NavColumn[] = [
       { label: "Sports Overview", href: "/sports" },
       { label: "Supported Sports", href: "/sports/supported" },
       { label: "Multi-Sport Operations", href: "/sports/multi-sport" },
-      { label: "Individual Sport Pages", href: "/sports/all" },
+      { label: "Individual Sport Pages", href: "/sports/all", badge: "GATED" },
     ],
   },
   {
@@ -379,7 +379,7 @@ export const footerColumns: NavColumn[] = [
       { label: "Integrations Overview", href: "/integrations" },
       { label: "Data Imports", href: "/integrations/data-imports" },
       { label: "APIs & Webhooks", href: "/integrations/apis-webhooks" },
-      { label: "Developer Documentation", href: "/developers" },
+      { label: "Developer Documentation", href: "/developers", badge: "GATED" },
       { label: "Request an Integration", href: "/integrations/request" },
     ],
   },
@@ -406,7 +406,7 @@ export const footerColumns: NavColumn[] = [
   {
     heading: "Company",
     links: [
-      { label: "Company", href: "/company" },
+      { label: "Company", href: "/about" },
       { label: "Leadership", href: "/company/leadership" },
       { label: "Careers", href: "/company/careers" },
       { label: "Newsroom", href: "/company/newsroom" },
@@ -430,7 +430,7 @@ export const footerColumns: NavColumn[] = [
       { label: "Cookie Policy", href: "/legal/cookie-policy" },
       { label: "Acceptable Use Policy", href: "/legal/acceptable-use" },
       { label: "Accessibility Statement", href: "/legal/accessibility" },
-      { label: "Data Processing Addendum", href: "/legal/dpa" },
+      { label: "Data Processing Addendum", href: "/legal/dpa", badge: "GATED" },
     ],
   },
 ];
@@ -442,7 +442,7 @@ export const offices = [
   },
   {
     label: "European Headquarters",
-    lines: ["167–169 Great Portland Street,", "5th Floor, London W1W 5PF,", "United Kingdom"],
+    lines: ["167–169 Great Portland Street,", "5th Floor, London W1W 5PF, United Kingdom"],
   },
 ];
 
@@ -457,10 +457,10 @@ export const legalLinks: NavLink[] = [
 
 // TODO: replace with the official social profile URLs
 export const socialLinks = [
-  { label: "LinkedIn", href: "https://www.linkedin.com/", icon: "linkedin" },
-  { label: "YouTube", href: "https://www.youtube.com/", icon: "youtube" },
-  { label: "X", href: "https://x.com/", icon: "x" },
-  { label: "Instagram", href: "https://www.instagram.com/", icon: "instagram" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/", icon: "linkedin", short: "in" },
+  { label: "YouTube", href: "https://www.youtube.com/", icon: "youtube", short: "▶" },
+  { label: "X", href: "https://x.com/", icon: "x", short: "X" },
+  { label: "Instagram", href: "https://www.instagram.com/", icon: "instagram", short: "IG" },
 ] as const;
 
 export const headerCtas = {
