@@ -1,8 +1,17 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
-import { safeguards } from "@/data/approvals-decisions";
 import { Lead, Photo, SectionTitle, sectionPad, wrap } from "./shared";
+
+const safeguards = [
+  { title: "History & corrections", text: "A later correction is recorded alongside the original, not written over it." },
+  { title: "Permissions model", text: "View, request, approve and export rights are scoped by organization and event." },
+  { title: "Data rights & export", text: "Retention, export and access follow the agreed pilot or customer terms." },
+  {
+    title: "Conflict & error handling",
+    text: "Concurrent edits, stale data and failed notifications are surfaced, not hidden.",
+  },
+];
 
 export function CorrectionsAccess() {
   return (

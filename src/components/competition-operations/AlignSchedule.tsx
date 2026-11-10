@@ -1,6 +1,18 @@
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
-import { responsibilities } from "@/data/competition-operations";
 import { Lead, Note, SectionTitle, sectionPad, wrap } from "./shared";
+
+const responsibilities = [
+  {
+    label: "Organizer provides",
+    tone: "yellow",
+    items: ["Fixture schedule and timing context", "Approved schedule-change record", "Relevant event and participant context"],
+  },
+  {
+    label: "Venue owns",
+    tone: "dark",
+    items: ["Local readiness and operational decisions", "On-site execution and staffing", "Safety, security and compliance authority"],
+  },
+] as const;
 
 export function AlignSchedule() {
   return (

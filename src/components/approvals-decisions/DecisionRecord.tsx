@@ -1,6 +1,16 @@
 import { Reveal } from "@/components/ui/Reveal";
-import { decisionRecord } from "@/data/approvals-decisions";
 import { Photo, SampleTag, SectionTitle, sectionPad, wrap } from "./shared";
+
+/** Fictional sample data — illustrative only. */
+const decisionRecord = [
+  { label: "Event", value: "Riverside Invitational · Northfield Arena" },
+  { label: "Change", value: "Competition start moved 12:15 → 12:25 PDT" },
+  { label: "Reason", value: "Entry backlog remained after turnstile restart" },
+  { label: "Requested by", value: "Venue Operations · Northfield Arena" },
+  { label: "Approved by", value: "Competition Director · Riverside League" },
+  { label: "Recorded", value: "September 26, 2026 at 12:15 PDT" },
+  { label: "Status", value: "Decision recorded" },
+];
 
 export function DecisionRecord() {
   return (

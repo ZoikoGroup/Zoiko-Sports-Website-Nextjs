@@ -1,6 +1,24 @@
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
-import { problems } from "@/data/about";
 import { Photo, SectionTitle, altBg, card, sectionPad, wrap } from "./shared";
+
+const problems = [
+  {
+    title: "Operational context is scattered",
+    text: "Schedules, readiness checks, staffing dependencies, approvals and exception updates often live in separate systems, spreadsheets and messages.",
+  },
+  {
+    title: "Organizations see different versions of the event",
+    text: "The organizer, club and venue can each hold a valid part of the picture without a governed way to connect the context they are authorized to share.",
+  },
+  {
+    title: "Responsibilities become unclear under pressure",
+    text: "When plans change, teams need to know who owns the next action, who can approve the decision and what has already been communicated.",
+  },
+  {
+    title: "Decisions are hard to reconstruct later",
+    text: "Post-event review is weaker when the reason, source, approver, timestamp and follow-up are split across multiple channels.",
+  },
+];
 
 export function Problems() {
   return (

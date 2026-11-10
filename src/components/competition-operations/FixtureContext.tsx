@@ -1,6 +1,13 @@
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
-import { fixtureContext } from "@/data/competition-operations";
 import { Lead, SectionTitle, altBg, card, sectionPad, wrap } from "./shared";
+
+/** Fictional sample data — illustrative only. */
+const fixtureContext = {
+  competition: { label: "Competition", title: "Riverside Invitational", text: "Organizer: Riverside League" },
+  fixture: { label: "Fixture", title: "RV-026", text: "Sep 26, 2026 · 12:15 PDT" },
+  venue: { label: "Venue", title: "Northfield Arena", text: "Local readiness owner" },
+  clubs: { label: "Participating clubs", items: ["Participating Club A", "Participating Club B"] },
+};
 
 const kicker = "text-[11px] font-semibold uppercase tracking-[0.1em]";
 

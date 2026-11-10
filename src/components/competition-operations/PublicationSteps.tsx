@@ -1,6 +1,12 @@
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
-import { publicationSteps } from "@/data/competition-operations";
 import { Lead, Note, SectionTitle, sectionPad, wrap } from "./shared";
+
+const publicationSteps = [
+  "Published version",
+  "Queued for recipients",
+  "Delivered or failed",
+  "Acknowledged by recipient",
+];
 
 export function PublicationSteps() {
   return (

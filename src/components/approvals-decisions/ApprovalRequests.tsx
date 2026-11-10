@@ -1,6 +1,58 @@
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
-import { requestStats, requests, type RequestStatus } from "@/data/approvals-decisions";
 import { Lead, SampleTag, SectionTitle, card, sectionPad, wrap } from "./shared";
+
+/** Fictional sample data — illustrative only. */
+const requestStats = [
+  { value: 3, label: "Awaiting my decision" },
+  { value: 1, label: "Changes requested" },
+  { value: 2, label: "Due soon" },
+  { value: 8, label: "Closed" },
+];
+
+/** Fictional sample data — illustrative only. */
+const requests: {
+  request: string;
+  event: string;
+  requestedBy: string;
+  assignedTo: string;
+  due: string;
+  status: RequestStatus;
+}[] = [
+  {
+    request: "Start-time change",
+    event: "Riverside Invitational",
+    requestedBy: "Venue Operations",
+    assignedTo: "Competition Director",
+    due: "Sep 26, 12:15 PDT",
+    status: "Awaiting decision",
+  },
+  {
+    request: "Steward count sign-off",
+    event: "Riverside Invitational",
+    requestedBy: "Northfield Arena Ops",
+    assignedTo: "Competition Director",
+    due: "Sep 26, 11:40 PDT",
+    status: "Pending",
+  },
+  {
+    request: "Gate reopening confirmation",
+    event: "Fairview Classic",
+    requestedBy: "Venue Operations",
+    assignedTo: "Competition Director",
+    due: "Sep 26, 09:05 PDT",
+    status: "Changes requested",
+  },
+  {
+    request: "Entry capacity adjustment",
+    event: "Riverside Invitational",
+    requestedBy: "Venue Operations",
+    assignedTo: "Competition Director",
+    due: "Sep 25, 18:20 PDT",
+    status: "Closed",
+  },
+];
+
+type RequestStatus = "Awaiting decision" | "Pending" | "Changes requested" | "Closed";
 
 const statusStyle: Record<RequestStatus, string> = {
   "Awaiting decision": "bg-brand-yellow/25 text-ink",

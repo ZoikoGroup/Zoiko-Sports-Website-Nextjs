@@ -1,6 +1,43 @@
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
-import { principles, visionMission } from "@/data/about";
 import { Photo, wrap } from "./shared";
+
+const principles = [
+  {
+    title: "Connected, not centralized by default",
+    text: "Shared context should not mean universal visibility. Access follows organization, role and responsibility.",
+  },
+  {
+    title: "Operational before ornamental",
+    text: "The platform starts with real workflows and decisions, not dashboards that merely visualize disconnected data.",
+  },
+  {
+    title: "Intelligence grounded in evidence",
+    text: "Analytics and AI build on attributable, time-aware operational data rather than become the system of record by themselves.",
+  },
+  {
+    title: "Integrate before replace",
+    text: "Where a trusted specialist system already works, Zoiko Sports connects it rather than demanding unnecessary rip-and-replace.",
+  },
+  {
+    title: "Expand by verified capability",
+    text: "New public claims follow implemented, tested and governed capability — not precede it.",
+  },
+  {
+    title: "Cross-sport by architecture",
+    text: "The core model supports common sports operating patterns while allowing sport-specific rules and workflows.",
+  },
+];
+
+const visionMission = [
+  {
+    label: "Vision",
+    text: "A world where every sports organization can operate from trusted, connected information—across competitions, venues, teams, partners and the experiences built around them.",
+  },
+  {
+    label: "Mission",
+    text: "To build the trusted operating and intelligence infrastructure that helps sports organizations coordinate events, connect systems and data, and make better-informed decisions without losing organizational accountability.",
+  },
+];
 
 export function VisionMission() {
   return (

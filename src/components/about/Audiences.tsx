@@ -1,6 +1,20 @@
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
-import { audiences } from "@/data/about";
 import { Lead, Note, Photo, SectionTitle, card, sectionPad, wrap } from "./shared";
+
+const audiences = [
+  {
+    title: "Leagues & competition organizers",
+    text: "Competition directors, operations leaders and event managers coordinating schedules, venues, approvals and delivery across multiple participants.",
+  },
+  {
+    title: "Clubs",
+    text: "Club operations managers, secretaries and event-day leads connecting team preparation with organizer and venue responsibilities.",
+  },
+  {
+    title: "Venue operators",
+    text: "Venue directors, operations managers and safety/operations leads coordinating readiness, dependencies and event-day exceptions.",
+  },
+];
 
 export function Audiences() {
   return (

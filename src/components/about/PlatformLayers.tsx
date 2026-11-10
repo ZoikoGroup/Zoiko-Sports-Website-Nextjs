@@ -1,6 +1,16 @@
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
-import { layers } from "@/data/about";
 import { Lead, Photo, SectionTitle, altBg, card, sectionPad, wrap } from "./shared";
+
+const layers = [
+  { title: "Competition", text: "Scheduling, officiating context, tracking, statistics and competition operations." },
+  { title: "Venue", text: "Readiness, operations, workforce, communications, access and event delivery." },
+  { title: "Performance", text: "Athlete, training, biomechanics and performance systems through governed integrations." },
+  { title: "Business", text: "Commercial operations, CRM, ticketing, sponsorship, merchandise and revenue context." },
+  { title: "Fan", text: "Apps, communities, event discovery, second-screen and connected experiences." },
+  { title: "Intelligence", text: "Scouting, recruitment, forecasting, decision support and cross-domain analysis." },
+  { title: "Partner ecosystem", text: "Travel, hospitality, retail, service providers, developers and approved third parties." },
+  { title: "Media", text: "Streaming, content, highlights, graphics, commentary and rights-linked workflows." },
+];
 
 export function PlatformLayers() {
   return (

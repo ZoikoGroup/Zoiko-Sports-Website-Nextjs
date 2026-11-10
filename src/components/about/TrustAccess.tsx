@@ -1,8 +1,38 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
-import { trustPoints } from "@/data/about";
 import { Lead, Photo, SectionTitle, sectionPad, wrap } from "./shared";
+
+const trustPoints = [
+  {
+    title: "Organization and role scope",
+    text: "Users access the records and actions authorized for their organization, role and event responsibility.",
+  },
+  {
+    title: "Recorded responsibility",
+    text: "Important workflow actions identify the acting user, organization, role and time where supported.",
+  },
+  {
+    title: "Approval integrity",
+    text: "Approval history preserves changes and corrections rather than silently overwriting context.",
+  },
+  {
+    title: "Notification clarity",
+    text: "A queued or delivered message is not the same as a human acknowledgment; status language distinguishes them.",
+  },
+  {
+    title: "Integration control",
+    text: "Imported data retains source context and permissions appropriate to the connected system and agreement.",
+  },
+  {
+    title: "Sensitive data discipline",
+    text: "Medical, safeguarding and participant-sensitive workflows require separately approved scope, controls and evidence.",
+  },
+  {
+    title: "AI accountability",
+    text: "AI may assist with analysis and workflow, but authoritative records, permissions and responsibility remain governed outside the model.",
+  },
+];
 
 export function TrustAccess() {
   return (

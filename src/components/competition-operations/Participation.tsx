@@ -1,6 +1,13 @@
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
-import { audiences, pilotStages } from "@/data/competition-operations";
 import { SectionTitle, sectionPad, wrap } from "./shared";
+
+const audiences = [
+  { title: "Leagues & competition organizers", text: "Coordinate the fixture and approval authority." },
+  { title: "Clubs", text: "Receive and acknowledge relevant competition updates." },
+  { title: "Venue operators", text: "Align organizer timings with venue-owned operating work." },
+];
+
+const pilotStages = ["Qualify", "Scope", "Configure", "Operate", "Evaluate"];
 
 export function Participation() {
   return (

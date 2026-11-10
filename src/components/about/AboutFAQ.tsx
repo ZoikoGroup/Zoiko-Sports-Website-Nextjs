@@ -4,8 +4,43 @@ import { AnimatePresence, motion } from "motion/react";
 import { useId, useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { Reveal } from "@/components/ui/Reveal";
-import { aboutFaqs } from "@/data/about";
 import { Photo, SectionTitle, sectionPad, wrap } from "./shared";
+
+// NOTE: only the first answer came from the design; review the rest before launch.
+const aboutFaqs = [
+  {
+    q: "What is Zoiko Sports?",
+    a: "Zoiko Sports is a global sports technology platform being built to connect competition and venue operations first, then progressively support a broader governed sports operating and intelligence layer.",
+  },
+  {
+    q: "How does Zoiko Sports handle approvals?",
+    a: "Approvals are recorded against the acting user, organization, role and time where the workflow supports it. Approval history preserves changes and corrections rather than overwriting them, and authority for real-world decisions stays with the authorized people and organizations.",
+  },
+  {
+    q: "Does Zoiko Sports use AI?",
+    a: "AI may assist with analysis and workflow over time. Authoritative records, permissions and responsibility remain governed outside the model, and AI capability is only described publicly once it is implemented, tested and governed.",
+  },
+  {
+    q: "What is the One Sports Graph?",
+    a: "It is an internal name for the long-term direction: a governed data model that connects sports entities and events—competitions, fixtures, venues, clubs, organizations and decisions—rather than leaving them isolated in product silos. Public use of the name is gated by brand and architecture approval.",
+  },
+  {
+    q: "How does Zoiko Sports protect data between organizations?",
+    a: "Access is scoped to organization, role and event responsibility. Shared context does not mean universal visibility—each participating organization works with the information it is authorized to use.",
+  },
+  {
+    q: "Who owns data contributed to Zoiko Sports?",
+    a: "Data ownership, permissions, retention and processing terms are set out in the pilot agreement and Data Processing Addendum. The Trust Center explains how Zoiko Sports approaches data handling.",
+  },
+  {
+    q: "Where is Zoiko Sports based?",
+    a: "Zoiko Sports is operated by Zoiko Tech Inc., a Zoiko Group company, headquartered in Sacramento, California, with a European headquarters in London, United Kingdom.",
+  },
+  {
+    q: "How can an organization start?",
+    a: "Scope a pilot around one event or fixture block. We agree the participating organizations, the workflow to connect, responsibilities and the measures that would make the pilot worth expanding.",
+  },
+];
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 

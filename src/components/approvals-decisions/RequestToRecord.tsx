@@ -1,6 +1,13 @@
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
-import { workflowSteps } from "@/data/approvals-decisions";
 import { Lead, SectionTitle, altBg, sectionPad, wrap } from "./shared";
+
+const workflowSteps = [
+  { title: "Submit", text: "Proposed change, rationale and source references are entered." },
+  { title: "Review", text: "Evidence, linked records and requester role are checked." },
+  { title: "Decide", text: "An authorized role approves, rejects or requests changes." },
+  { title: "Record", text: "The decision, actor, role and time are recorded against the event." },
+  { title: "Notify & acknowledge", text: "Scoped recipients are informed and may confirm receipt." },
+];
 
 export function RequestToRecord() {
   return (

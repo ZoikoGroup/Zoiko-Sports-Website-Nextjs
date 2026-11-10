@@ -25,7 +25,13 @@ export const navPaths = new Set(
  * Nav paths that have their own route under src/app (e.g. app/about/page.tsx).
  * The `[...slug]` placeholder skips these so it never pre-renders over them.
  */
-export const builtPaths = new Set(["/about", "/platform/approvals-decisions", "/platform/competition-operations"]);
+export const builtPaths = new Set(["/about", "/platform/approvals-decisions", "/platform/competition-operations",
+  "/platform/operational-records",
+  "/platform/organizations-access",
+  "/platform/post-event-review",
+  "/platform/readiness-checks",
+  "/platform/venue-operations",
+]);
 
 /** Every path the site serves a page for. */
 export function isKnownPath(pathname: string) {

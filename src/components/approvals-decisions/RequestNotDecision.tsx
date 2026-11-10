@@ -1,6 +1,11 @@
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
-import { requestSteps } from "@/data/approvals-decisions";
 import { Lead, Photo, SectionTitle, altBg, sectionPad, wrap } from "./shared";
+
+const requestSteps = [
+  { title: "Submit request", text: "Venue Operations proposes an action and attaches the relevant evidence." },
+  { title: "Authorize change", text: "Competition Director reviews the request and records a decision." },
+  { title: "Share outcome", text: "Authorized event recipients are notified and may be asked to acknowledge." },
+];
 
 export function RequestNotDecision() {
   return (
