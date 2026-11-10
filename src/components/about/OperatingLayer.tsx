@@ -1,6 +1,14 @@
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
-import { capabilities } from "@/data/about";
 import { Lead, Photo, SectionTitle, altBg, card, sectionPad, wrap } from "./shared";
+
+const capabilities = [
+  { title: "Competition context", text: "Connect the event or fixture schedule to the operational work that depends on it." },
+  { title: "Venue readiness", text: "Coordinate checks, owners, due times and approvals around venue preparation." },
+  { title: "Responsibilities", text: "Make accountable ownership visible across participating organizations and roles." },
+  { title: "Event record", text: "Preserve the context of material operational decisions and follow-up work for review." },
+  { title: "Event-day exceptions", text: "Record operational exceptions, assign owners and track status through resolution." },
+  { title: "Approvals and acknowledgments", text: "Distinguish requests, approvals, notifications and recorded acknowledgments." },
+];
 
 export function OperatingLayer() {
   return (

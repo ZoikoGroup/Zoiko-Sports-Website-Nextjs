@@ -1,6 +1,20 @@
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
-import { roles } from "@/data/approvals-decisions";
 import { Lead, Photo, SectionTitle, altBg, sectionPad, wrap } from "./shared";
+
+const roles = [
+  {
+    kicker: "Submits",
+    title: "Venue Operations",
+    text: "Raises an operational request when conditions on-site change.",
+    actions: ["Submit request", "Attach evidence"],
+  },
+  {
+    kicker: "Decides",
+    title: "Competition Director",
+    text: "Reviews the request against the competition's authority and records a decision.",
+    actions: ["Approve", "Reject", "Request changes"],
+  },
+];
 
 export function CoordinateAuthority() {
   return (

@@ -1,6 +1,27 @@
 import { Reveal } from "@/components/ui/Reveal";
-import { companyFacts } from "@/data/about";
 import { SectionTitle, altBg, sectionPad, wrap } from "./shared";
+
+const companyFacts = [
+  { q: "What is the company called?", a: "Zoiko Sports is the public-facing masterbrand." },
+  { q: "Who owns and operates Zoiko Sports?", a: "Zoiko Tech Inc., a Zoiko Group company." },
+  { q: "Where is Zoiko Sports headquartered?", a: "Sacramento, California, United States." },
+  {
+    q: "Where is the European headquarters?",
+    a: "167–169 Great Portland Street, 5th Floor, London W1W 5PF, United Kingdom.",
+  },
+  {
+    q: "What category is Zoiko Sports in?",
+    a: "Global sports technology, with an initial focus on sports operations software.",
+  },
+  {
+    q: "Is Zoiko Sports designed globally?",
+    a: "Yes — for multi-sport, multi-organization and multi-jurisdiction use, subject to market readiness.",
+  },
+  {
+    q: "What is the current commercial entry point?",
+    a: "A scoped pilot around one event or fixture block, typically an organizer and venue.",
+  },
+];
 
 export function CompanyInfo() {
   return (

@@ -1,7 +1,32 @@
 import Image from "next/image";
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
-import { participants, pilotStages } from "@/data/approvals-decisions";
 import { SectionTitle, altBg, card, sectionPad, wrap } from "./shared";
+
+const participants = [
+  {
+    title: "League / competition organizer",
+    text: "Authorize fixture changes while preserving the recorded reason.",
+    note: "Decision authority stays with the organizer.",
+  },
+  {
+    title: "Venue operator",
+    text: "Submit readiness or exception-driven requests without assuming competition authority.",
+    note: "A request is not an approval.",
+  },
+  {
+    title: "Club",
+    text: "See only the outcomes you are authorized to receive, with a clear acknowledgment expectation.",
+    note: "No implied access beyond your scope.",
+  },
+];
+
+const pilotStages = [
+  { title: "Qualify", src: "/images/approvals-decisions/stage-qualify-basketball.webp", alt: "Basketball player soaring for a dunk" },
+  { title: "Scope", src: "/images/approvals-decisions/stage-scope-kickboxing.webp", alt: "Kickboxer throwing a knee strike" },
+  { title: "Configure", src: "/images/approvals-decisions/stage-configure-tennis.webp", alt: "Tennis player setting up a backhand" },
+  { title: "Operate", src: "/images/approvals-decisions/stage-operate-volleyball.webp", alt: "Volleyball player digging a low ball" },
+  { title: "Evaluate", src: "/images/approvals-decisions/stage-evaluate-discus.webp", alt: "Discus thrower mid-spin in a stadium" },
+];
 
 export function Participants() {
   return (

@@ -1,6 +1,12 @@
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
-import { lifecycle } from "@/data/about";
 import { Lead, Note, SectionTitle, sectionPad, wrap } from "./shared";
+
+const lifecycle = [
+  { title: "Plan", text: "Connect the competition schedule, venue, participating organizations, owners and deadlines." },
+  { title: "Prepare", text: "Track readiness, dependencies and approvals before the event." },
+  { title: "Coordinate", text: "Record operational exceptions, assign owners and communicate material changes to authorized teams." },
+  { title: "Review", text: "Reconstruct decisions, close follow-up work and retain the agreed event record." },
+];
 
 export function Lifecycle() {
   return (

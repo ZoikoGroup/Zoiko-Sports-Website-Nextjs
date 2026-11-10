@@ -1,6 +1,20 @@
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
-import { fixtureProblems } from "@/data/competition-operations";
 import { Lead, SectionTitle, card, sectionPad, wrap } from "./shared";
+
+const fixtureProblems = [
+  {
+    title: "Schedule drift",
+    text: "A revised start time reaches the competition office, while venue access and club travel plans still reflect the old schedule.",
+  },
+  {
+    title: "Responsibility gaps",
+    text: "When a schedule changes, it is not always clear who owns the next action or who is authorized to approve it.",
+  },
+  {
+    title: "Decision reconstruction",
+    text: "Reviewing a fixture afterward is harder when the reason, approver and timing are split across separate channels.",
+  },
+];
 
 export function OneFixture() {
   return (

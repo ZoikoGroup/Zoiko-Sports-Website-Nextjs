@@ -4,8 +4,35 @@ import { AnimatePresence, motion } from "motion/react";
 import { useId, useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { Reveal } from "@/components/ui/Reveal";
-import { competitionFaqs } from "@/data/competition-operations";
 import { Photo, SectionTitle, altBg, sectionPad, wrap } from "./shared";
+
+// NOTE: only the first answer came from the design; review the rest before launch.
+const competitionFaqs = [
+  {
+    q: "What is competition operations software?",
+    a: "It helps competition organizers plan and coordinate the fixtures, assigned responsibilities, schedule changes and recorded decisions involved in delivering a sporting event. Zoiko Sports is being developed with an initial focus on connecting organizer-side work to relevant club and venue context.",
+  },
+  {
+    q: "How do we know an update was acknowledged?",
+    a: "Publication, queuing, delivery and human acknowledgment are tracked as separate events. A delivered message is not treated as an acknowledgment until the recipient confirms it.",
+  },
+  {
+    q: "Can the platform decide if a venue is safe to open?",
+    a: "No. The authorized venue team retains control of local operational and safety decisions. A schedule or check status in Zoiko Sports is never a venue safety certification.",
+  },
+  {
+    q: "Does Zoiko Sports replace our competition scheduling tools?",
+    a: "Not by default. Pilot scoping identifies the source schedules and approved data exchange; Zoiko Sports connects existing systems rather than assuming replacement.",
+  },
+  {
+    q: "What happens if venue connectivity is interrupted?",
+    a: "Connectivity requirements and the fallback procedure for interruptions are agreed during pilot scoping, before any live event.",
+  },
+  {
+    q: "How does a competition organizer start?",
+    a: "Start with one competition event or fixture block. Agree the participating organizer, clubs and venue, the workflow to assess, responsible roles and success measures before the pilot begins.",
+  },
+];
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 

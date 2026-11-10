@@ -1,8 +1,14 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
-import { visibility } from "@/data/competition-operations";
 import { Lead, Photo, SectionTitle, altBg, sectionPad, wrap } from "./shared";
+
+const visibility = [
+  { title: "Organizer", text: "Sees the full competition schedule and requested changes within its own events." },
+  { title: "Club", text: "Sees relevant shared fixture updates for its own participation, not other clubs’ restricted details." },
+  { title: "Venue", text: "Sees fixture dependencies that affect local operations, scoped to its own venue." },
+  { title: "Read-only auditor", text: "Sees limited evidence for review; restricted records are marked, not silently hidden." },
+];
 
 export function ShareContext() {
   return (

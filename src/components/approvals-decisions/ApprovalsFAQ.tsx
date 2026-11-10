@@ -4,8 +4,35 @@ import { AnimatePresence, motion } from "motion/react";
 import { useId, useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { Reveal } from "@/components/ui/Reveal";
-import { approvalsFaqs } from "@/data/approvals-decisions";
 import { Photo, SectionTitle, sectionPad, wrap } from "./shared";
+
+// NOTE: only the first answer came from the design; review the rest before launch.
+const approvalsFaqs = [
+  {
+    q: "Who can approve an event schedule change?",
+    a: "An authorized role tied to the event’s agreed governance — such as a competition director — not whoever submitted the request.",
+  },
+  {
+    q: "What happens if a request is rejected?",
+    a: "The rejection is recorded with the deciding role, time and reason. The requesting organization is informed, and a revised request can be submitted as a new, separately recorded action.",
+  },
+  {
+    q: "Who can see the source evidence linked to a decision?",
+    a: "Evidence follows the same access model as the decision: visibility is scoped by organization, role and event responsibility, as agreed for the pilot.",
+  },
+  {
+    q: "Does Zoiko Sports replace venue or competition authority?",
+    a: "No. Authorized people and organizations retain authority for operational, safety and competition decisions. Zoiko Sports records and connects the context around those decisions; a software status never certifies a venue as safe.",
+  },
+  {
+    q: "What does \"Illustrative workflow\" mean on this page?",
+    a: "The records, names, requests and counts shown are fictional specimen data used to explain the proposed workflow. They do not describe a real event or customer.",
+  },
+  {
+    q: "How can our organization start?",
+    a: "Scope a pilot around one event or fixture block. Together we define the participating organizations, decision roles, change types, evidence and the measures that would make the pilot worth expanding.",
+  },
+];
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
