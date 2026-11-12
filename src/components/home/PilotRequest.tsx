@@ -29,6 +29,12 @@ function Field({ label, optional, children }: { label: string; optional?: string
 
 type Status = "idle" | "sending" | "sent" | "error";
 
+/**
+ * The site is static, so requests go to an external endpoint provided by the platform team.
+ * It is set at build time (see .env.example) and is public by design: never put a secret here.
+ */
+const FORM_URL = process.env.NEXT_PUBLIC_FORM_ENDPOINT;
+
 export function PilotRequest() {
   const [step, setStep] = useState(0);
   const [status, setStatus] = useState<Status>("idle");
@@ -51,9 +57,15 @@ export function PilotRequest() {
       partners: selectedPartners,
     };
 
+    // Only show "sent" once the endpoint has confirmed it; never a fake success.
+    if (!FORM_URL) {
+      console.error("NEXT_PUBLIC_FORM_ENDPOINT is not set, so the pilot request cannot be sent.");
+      setStatus("error");
+      return;
+    }
     setStatus("sending");
     try {
-      const res = await fetch("/api/pilot-request", {
+      const res = await fetch(FORM_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
@@ -260,7 +272,7 @@ export function PilotRequest() {
 
                   {status === "error" && (
                     <p role="alert" className="mt-5 rounded-lg bg-red-50 px-4 py-3 text-[13.5px] text-red-700">
-                      Something went wrong sending your request. Please try again.
+                      Your request could not be sent. Please try again, or contact us through the Contact page.
                     </p>
                   )}
 

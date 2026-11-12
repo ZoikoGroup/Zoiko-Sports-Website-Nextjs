@@ -9,10 +9,10 @@ export function generateStaticParams() {
   return [...navPaths].filter((p) => !builtPaths.has(p)).map((p) => ({ slug: p.slice(1).split("/") }));
 }
 
-/**
- * Anything else is a genuine 404. `src/proxy.ts` normally catches unknown paths
- * first (so the response gets a real 404 status); this is the safety net.
- */
+/** Static export: only the paths listed above are built; any other URL gets 404.html. */
+export const dynamicParams = false;
+
+/** Safety net: never render a placeholder for a path that is not in the navigation. */
 function assertKnown(slug: string[]) {
   if (!navPaths.has(`/${slug.join("/")}`)) notFound();
 }

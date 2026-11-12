@@ -1,13 +1,9 @@
 import { footerColumns, headerCtas, legalLinks, megaMenus } from "./navigation";
 
 /**
- * Real pages that are NOT linked from the header or footer.
- * Add the path here when you create one (e.g. "/about-driverxtra"),
- * otherwise `src/proxy.ts` will answer it with the 404 page.
+ * Internal paths linked from the header and footer, e.g. "/platform/readiness-checks".
+ * `app/[...slug]` builds a placeholder page for each one until it gets its own route.
  */
-export const extraPaths: string[] = [];
-
-/** Internal paths linked from the header and footer, e.g. "/platform/readiness-checks". */
 export const navPaths = new Set(
   [
     ...megaMenus.flatMap((m) => [...m.columns.flatMap((c) => c.links), m.feature.cta]).map((l) => l.href),
@@ -36,8 +32,3 @@ export const builtPaths = new Set(["/about", "/platform/approvals-decisions", "/
   "/solutions/event-readiness",
 ]);
 
-/** Every path the site serves a page for. */
-export function isKnownPath(pathname: string) {
-  const path = pathname.length > 1 ? pathname.replace(/\/+$/, "") : pathname;
-  return path === "/" || navPaths.has(path) || extraPaths.includes(path);
-}
