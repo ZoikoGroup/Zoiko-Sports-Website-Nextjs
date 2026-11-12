@@ -92,8 +92,8 @@ export const megaMenus: MegaMenu[] = [
         heading: "Review & Scale",
         links: [
           { label: "Post-Event Review", href: "/solutions/post-event-review", badge: "GATED", description: "Review recorded decisions and open follow-up work." },
-          { label: "Multi-Event Operating Model", href: "/solutions/multi-event", badge: "GATED", description: "Extend an agreed workflow across a fixture block." },
-          { label: "Pilot Program", href: "/pilot", description: "Scope one event or fixture block with agreed measures." },
+          { label: "Multi-Event Operating Model", href: "/solutions/multi-event-operating-model", badge: "GATED", description: "Extend an agreed workflow across a fixture block." },
+          { label: "Pilot Program", href: "/solutions/pilot-program", description: "Scope one event or fixture block with agreed measures." },
         ],
       },
     ],
@@ -128,7 +128,7 @@ export const megaMenus: MegaMenu[] = [
         heading: "Enterprise Path",
         links: [
           { label: "Multi-Organization Operations", href: "/who-we-serve/multi-organization", badge: "GATED", description: "For programs involving organizer, venues and clubs." },
-          { label: "Pilot Program", href: "/pilot", description: "Agree participants, workflow, responsibilities and measures." },
+          { label: "Pilot Program", href: "/solutions/pilot-program", description: "Agree participants, workflow, responsibilities and measures." },
         ],
       },
     ],

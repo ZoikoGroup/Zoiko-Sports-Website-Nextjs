@@ -1,7 +1,7 @@
-const REQUIRED = ["email", "name", "organization", "organizationType", "country", "sport", "event", "timing"] as const;
+const REQUIRED = ["email", "name", "organization", "organizationType", "country", "sport", "timing"] as const;
 
 /**
- * Receives pilot requests from the home page form.
+ * Receives pilot requests from the home page form and the Pilot Program page form.
  *
  * TODO: deliver the request somewhere durable (CRM, email, ticketing).
  * Right now it is only validated and logged on the server.
@@ -26,6 +26,7 @@ export async function POST(request: Request) {
     organization: body.organization,
     organizationType: body.organizationType,
     event: body.event,
+    challenges: body.challenges,
     timing: body.timing,
     receivedAt: new Date().toISOString(),
   });
