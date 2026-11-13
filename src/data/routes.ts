@@ -27,8 +27,11 @@ export const builtPaths = new Set(["/about", "/platform/approvals-decisions", "/
   "/platform/post-event-review",
   "/platform/readiness-checks",
   "/platform/venue-operations",
+  "/solutions",
   "/solutions/competition-to-venue",
   "/solutions/decision-approval-records",
   "/solutions/event-readiness",
+  "/solutions/post-event-review",
+  "/solutions/update-acknowledgments",
 ]);
 
