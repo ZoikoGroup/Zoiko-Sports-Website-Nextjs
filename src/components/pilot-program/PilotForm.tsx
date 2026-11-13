@@ -9,6 +9,9 @@ import { Photo, cream, sectionPad, wrap } from "./shared";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
+/** External form endpoint from the platform team (static site: there is no /api route). See .env.example. */
+const FORM_URL = process.env.NEXT_PUBLIC_FORM_ENDPOINT;
+
 const orgTypes = ["League / competition organizer", "Club / team", "Venue operator", "Event delivery partner", "Other"];
 const timings = ["Next 30 days", "31–90 days", "3–6 months", "6+ months", "Exploring"];
 const challenges = [
@@ -70,9 +73,14 @@ export function PilotForm() {
     setChallengeError(false);
 
     const data = { ...(Object.fromEntries(form) as Record<string, string>), challenges: selected };
+    if (!FORM_URL) {
+      console.error("NEXT_PUBLIC_FORM_ENDPOINT is not set, so the pilot request cannot be sent.");
+      setStatus("error");
+      return;
+    }
     setStatus("sending");
     try {
-      const res = await fetch("/api/pilot-request", {
+      const res = await fetch(FORM_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),

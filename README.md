@@ -7,7 +7,7 @@ npm install
 npm run dev                  # http://localhost:3000
 bash static-export-check.sh  # must end with "0 blocker(s)"
 npm run build                # writes the static site to out/
-npx serve out                # preview the exported files
+npm start                    # serves out/ (scripts/serve-static.mjs; used by the VM via PM2)
 ```
 
 ## Static hosting (Google Cloud Storage)
