@@ -33,5 +33,9 @@ export const builtPaths = new Set(["/about", "/platform/approvals-decisions", "/
   "/solutions/event-readiness",
   "/solutions/post-event-review",
   "/solutions/update-acknowledgments",
+  "/who-we-serve/clubs-teams",
+  "/who-we-serve/contractors-partners",
+  "/who-we-serve/leagues-organizers",
+  "/who-we-serve/multi-organization",
 ]);
 
