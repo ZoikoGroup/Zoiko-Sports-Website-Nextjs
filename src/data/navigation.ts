@@ -148,7 +148,7 @@ export const megaMenus: MegaMenu[] = [
         heading: "Start Here",
         links: [
           { label: "Sports Overview", href: "/sports", description: "How Zoiko Sports adapts operational workflows to different sports." },
-          { label: "Discuss Your Sport", href: "/pilot?topic=sport", description: "Scope the sport, event format, organizations and operating requirements through the pilot flow." },
+          { label: "Discuss Your Sport", href: "/sports/discuss-your-sport", description: "Scope the sport, event format, organizations and operating requirements through the pilot flow." },
         ],
       },
       {
@@ -175,7 +175,7 @@ export const megaMenus: MegaMenu[] = [
       imageAlt: "Athletes training in a gym",
       title: "Launch rule",
       text: "At launch, this panel may contain only Sports Overview and Discuss Your Sport.",
-      cta: { label: "Discuss Your Sport", href: "/pilot?topic=sport" },
+      cta: { label: "Discuss Your Sport", href: "/sports/discuss-your-sport" },
     },
   },
   {
