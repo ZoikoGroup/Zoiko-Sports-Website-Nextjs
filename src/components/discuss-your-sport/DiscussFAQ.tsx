@@ -1,0 +1,102 @@
+"use client";
+
+import { AnimatePresence, motion } from "motion/react";
+import { useId, useState } from "react";
+import { ChevronDown } from "lucide-react";
+import { Reveal } from "@/components/ui/Reveal";
+import { Photo, sectionPad, SectionTitle, wrap } from "./shared";
+
+const EASE = [0.16, 1, 0.3, 1] as const;
+
+// NOTE: only the first answer came from the design; review the rest before launch.
+const discussFaqs = [
+  {
+    q: "What does “Discuss Your Sport” mean?",
+    a: "It’s a way to describe your sport or competition format, the organizations involved, and the coordination problem you want to evaluate. Submitting an inquiry does not confirm that Zoiko Sports currently supports that sport or that a pilot has been accepted.",
+  },
+  {
+    q: "What information should we prepare?",
+    a: "Keep it high-level: the sport or competition type, event timing, the types of organizations involved, the coordination challenge, and whether partner organizations are involved. Don’t include sensitive participant information.",
+  },
+  {
+    q: "What does a pilot cost?",
+    a: "Pilot terms, including any fees, are agreed during scoping and depend on the participants, workflow and support involved. Nothing is charged for submitting an inquiry.",
+  },
+  {
+    q: "Can Zoiko Sports operate with unreliable venue connectivity?",
+    a: "Offline support is not assumed. Connectivity at your venue would be discussed during scoping, and any operating limits agreed in writing before a pilot begins.",
+  },
+  {
+    q: "Who decides whether a venue is safe or an event can proceed?",
+    a: "Your authorized people and established procedures. Zoiko Sports records coordination activity; it does not certify venue safety or make go/no-go decisions.",
+  },
+  {
+    q: "How is information shared between participating organizations?",
+    a: "Access is scoped by organization and role. Each participant sees only what has been agreed for the event or fixture block in the pilot scope.",
+  },
+];
+
+export function DiscussFAQ() {
+  const [open, setOpen] = useState<number | null>(0);
+  const baseId = useId();
+
+  return (
+    <section className={`bg-white ${sectionPad}`}>
+      <div className={`${wrap} grid gap-10 lg:grid-cols-[283px_1fr] lg:gap-6`}>
+        {/* Heading sits above the list on desktop, so the photo starts level with the first question */}
+        <Reveal className="lg:col-start-2">
+          <SectionTitle>Questions about discussing your sport</SectionTitle>
+        </Reveal>
+
+        <Reveal delay={0.1} className="hidden lg:row-start-2 lg:mt-4 lg:block">
+          <Photo
+            src="/images/discuss-your-sport/faq-football-strike.webp"
+            alt="Footballer in a dark kit striking the ball on a grass pitch"
+            sizes="283px"
+            className="aspect-[283/406] w-full rounded-md!"
+          />
+        </Reveal>
+
+        <Reveal delay={0.15} className="lg:col-start-2 lg:row-start-2">
+          <ul>
+            {discussFaqs.map((f, i) => {
+              const isOpen = open === i;
+              const panelId = `${baseId}-panel-${i}`;
+              return (
+                <li key={f.q} className="border-b border-[#ebe9df]">
+                  <button
+                    aria-expanded={isOpen}
+                    aria-controls={panelId}
+                    onClick={() => setOpen(isOpen ? null : i)}
+                    className="group flex w-full items-center justify-between gap-6 py-[18px] text-left"
+                  >
+                    <span className="font-heading text-[16px] font-semibold text-ink transition-colors duration-300 group-hover:text-brand-blue">
+                      {f.q}
+                    </span>
+                    <ChevronDown
+                      className={`h-4 w-4 shrink-0 text-ink/40 transition-transform duration-300 ${isOpen ? "rotate-180 text-ink" : ""}`}
+                    />
+                  </button>
+                  <AnimatePresence initial={false}>
+                    {isOpen && (
+                      <motion.div
+                        id={panelId}
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.4, ease: EASE }}
+                        className="overflow-hidden"
+                      >
+                        <p className="max-w-[900px] pb-5 text-[14.5px] leading-[1.7] text-ink-muted">{f.a}</p>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </li>
+              );
+            })}
+          </ul>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
