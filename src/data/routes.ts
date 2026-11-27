@@ -21,7 +21,7 @@ export const navPaths = new Set(
  * Nav paths that have their own route under src/app (e.g. app/about/page.tsx).
  * The `[...slug]` placeholder skips these so it never pre-renders over them.
  */
-export const builtPaths = new Set(["/about", "/integrations", "/integrations/data-imports", "/platform/approvals-decisions", "/platform/competition-operations",
+export const builtPaths = new Set(["/about", "/integrations", "/integrations/data-imports", "/integrations/scheduling-calendars", "/integrations/request","/platform/approvals-decisions", "/platform/competition-operations",
   "/platform/operational-records",
   "/platform/organizations-access",
   "/platform/post-event-review",
